@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--<p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <canvas id="canvas"></canvas>
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+    <p>A time-based greeting</p>
+    <p id="demo"></p>
+    <button>Press me</button>
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+        <option value="">--Make a choice--</option>
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowing">Snowing</option>
+        <option value="overcast">Overcast</option>
+    </select>
+    
+    <p></p>-
+    <label for="theme">Select theme: </label>
+    <select id="theme">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+    </select>
+    
+    <h1>This is my website</h1>
+    <h1></h1>
+    <select id="Month">
+        <option value="January">January</option>
+        <option value="February" selected>February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <ul>
+        <li>January</li>
+        <li class="active">February<span>(current month)</span></li>
+        <li>March</li>
+        <li>April</li>
+        <li>May</li>
+        <li>June</li>
+        <li>July</li>
+        <li>August</li>
+        <li>September</li>
+        <li>October</li>
+        <li>November</li>
+        <li>December</li>
+    </ul>
+    <h1>Hello, World!</h1>-->
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+
+
+
+    <script>
+        /*console.log("Hello, World!")
+        let message = 'Hello';
+        let name = 'John';
+        let admin;
+        admin = name;
+        alert(admin);
+        let ourPlanetName = 'Earth';
+        let currentUserName = 'John';
+        let x = 100 + 50;
+        let a = 5;
+        let b = 16;
+        let y = a + b;
+        let z = (100 + 50) * a;
+        document.getElementById("demo").innerHTML = x;
+        document.getElementById("demo1").innerHTML = y;
+        document.getElementById("demo2").innerHTML = z; 
+        let x = 5;
+        let y = 3;
+        let z = Math.pow(x,y);
+        document.getElementById("demo").innerHTML = z;
+        alert(10/4);
+        let x = 3.14;
+        let y = 3;
+        let z = 2556e-3;
+        alert(z);
+        let x = 999999999999999;
+        let y = (0.2 * 10 + 0.1 * 10) / 10;
+        alert(y);
+        let x = 10;
+        let y = 20;
+        let z = "30";
+        let result = x + y + z;
+        document.getElementById("demo").innerHTML = result;
+        let x = "100";
+        let y = "10";
+        let z = x / y;
+        document.getElementById("demo").innerHTML = z;
+        let x = 100 / "10";
+        document.getElementById("demo").innerHTML = x;
+        let x = 100 / "Apple";
+        document.getElementById("demo").innerHTML = isNaN(x);
+        let x = NaN;
+        let y = 5;
+        let z = x + y;
+        document.getElementById("demo").innerHTML = z;
+        let x = NaN;
+        let y = "5";
+        let z = x + y;
+        document.getElementById("demo").innerHTML = z;
+        let x = NaN;
+        document.getElementById("demo").innerHTML = typeof x;
+        let myNumber = 2;
+        let txt = "";
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";  
+        }
+        document.getElementById("demo").innerHTML = txt;
+        let x = 2 / 0;
+        let y = -2 / 0;
+        document.getElementById("demo").innerHTML = x + "<br>" + y;
+        let x = 0xFF;
+        document.getElementById("demo").innerHTML = "0xFF = " + x;
+        let myNumber = 32;
+        document.getElementById("demo").innerHTML =
+        "Decimal 32 = " + "<br><br>" +
+        "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+        "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+        "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+        "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+        "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+        "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+        "Binary (base 2): " + myNumber.toString(2);
+        const myInt = 5;
+        const myFloat = 6.667;
+        myInt;
+        myFloat;
+        typeof myInt;
+        typeof myFloat;
+        document.getElementById("demo").innerHTML = typeof myInt + typeof myFloat;
+        const lotsOfDecimal = 1.766584958675746364;
+        const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        document.getElementById("demo").innerHTML = twoDecimalPlaces;
+        let myNumber = "74";
+        myNumber = Number(myNumber) + 3;
+        document.getElementById("demo").innerHTML = myNumber;
+        let x = 10 + 7;
+        console.log("x is", x)
+        let y = 9 * 8;
+        console.log("y is", y)
+        let z = 60 % 3;
+        console.log("z is", z)
+        const num1 = 10;
+        const num2 = 50;
+        console.log(9*num1)
+        console.log(num1**3)
+        console.log(num2/num1)
+        console.log(5+10*3)
+        console.log((num2%9)*num1)
+        console.log((num2+num1)/(8+2))
+        let num1 = 4;
+        ++num1;
+        console.log(num1)
+        let num2 = 6;
+        --num2;
+        console.log(num2)
+        let x = 196;
+        x += 4;
+        let y = 50 + 50 * 3;
+        alert(y);
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, x, y);
+        let x = 10;
+        let y = 2;
+        console.log(x >= y)
+        const btn = document.querySelector("button");
+        const txt = document.querySelector("p");
+
+        btn.addEventListener("click", updateBtn);
+
+        function updateBtn() {
+            if (btn.textContent === "Start machine") {
+                    btn.textContent = "Stop machine";
+                    txt.textContent = "The machine has started!";
+                } else {
+                    btn.textContent = "Start machine";
+                    txt.textContent = "The machine is stopped.";
+                }
+        }
+        let x = 2;
+        let y = 4;
+        let a = 11;
+        let b = 3;
+        let z = x + y;
+        let c = a - b;
+        let finalResult = z * c;
+        let evenOddResult = finalResult % 2;
+        console.log("x is ", x)
+        console.log("y is ", y)
+        console.log("a is ", a)
+        console.log("b is ", b)
+        console.log("z is ", z)
+        console.log("c is ", c)
+        console.log("finalResult is ", finalResult)
+        console.log("evenOddNumber is ", evenOddResult)
+        let result = 7 + 13 / 9 + 7;
+        console.log(result)
+        let result2 = 100 / 2 * 6;
+        console.log(result2)
+        result *= result2;
+        console.log(result)
+        let finalResult = result.toFixed(2);
+        console.log(finalResult)
+        console.log(typeof finalResult)
+        let finalNumber = parseFloat(finalResult);
+        console.log(typeof finalNumber)
+        console.log(finalNumber)
+        const eleWeight = 1000;
+        const mouseWeight = 2;
+        let weightComparison = eleWeight < mouseWeight;
+        console.log(weightComparison)
+        const ostrichHeight = 2;
+        const duckHeight = 0.3;
+        let heightComparison = ostrichHeight > duckHeight;
+        console.log(heightComparison)
+        const pwd1 = 'stromboli';
+        const pwd2 = 'stROmBoLi';
+        let pwdMatch = pwd1 === pwd2;
+        console.log(pwdMatch)
+        alert(+true) //returns 1
+        alert(+"") // returns 0
+        let apples = "2";
+        let oranges = "3";
+        alert(apples + oranges)
+        alert(+apples + +oranges)
+        let x = 2 + 4 + 3 + 5 + 8 + 1;
+        console.log(x)
+        console.log(23+97)
+        let y = (4 + 6 + 9) / 77;
+        console.log(y.toFixed(5))
+        let a = 10;
+        console.log(9 * a)
+        let b = 7 * a;
+        console.log(b)
+        const max = 57;
+        let actual = max - 13;
+        let percentage = actual / max;
+        console.log(percentage.toFixed(4))
+        const string = "The revolution will not be televised.";
+        console.log(string)
+        const badString = string;
+        console.log(badString)
+        const sgl = 'single quotes';
+        const dbl = "double quotes";
+        console.log(sgl)
+        console.log(dbl)
+        const sglDbl = 'Would you eat a "fish supper"?';
+        const dblSgl = "I'm feeling blue.";
+        console.log(sglDbl);
+        console.log(dblSgl);
+        const bigmouth = 'I\'ve got no right to take my place…';
+        console.log(bigmouth);
+        const name = "Chris";
+        const greeting = `Hello, ${name}`;
+        console.log(greeting); // "Hello, Chris"
+        const one = "Hello, ";
+        const two = "how are you?";
+        const joined = `${one}${two}`;
+        console.log(joined);// "Hello, how are you?"
+        const button = document.querySelector("button");
+        function greet(){
+            const name = prompt("What is your name?");
+            alert(`Hello ${name}, nice to see you!`);
+        }
+        button.addEventListener("click", greet);
+        const myNum = 123;
+        const myString = myNum.toString();
+        console.log(typeof myString);
+        const song = "Fight the Youth";
+        const score = 9;
+        const highestScore = 10;
+        //const output = `I like the song ${song}. I gave it a score of ${(score / highestScore) * 100}%.`;
+        //console.log(output); // "I like the song Fight the Youth. I gave it a score of 90%."
+        const output = 
+        `I like the song.\nI gave it a score of 90%.`;
+        console.log(output);
+        /*
+        I like the song.
+        I gave it a score of 90%.
+        
+       let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       let length = text.length;
+       //let part = text.slice(13);
+       //console.log(part);
+       console.log(length);
+       let str = "Apple, Banana, Kiwi"
+       let part = str.substr(7)
+       console.log(part)//Banana
+       let text = "Please visit Microsoft and Microsoft!"
+       let newText = text.replace(/Microsoft/g, "W3Schools")
+       console.log(newText)
+       let text = "              I love cats. Cats are very easy to love. Cats are very popular.            "
+       text = text.replaceAll("Cats", "Dogs");
+       text = text.replaceAll("cats", "dogs")
+       text = text.trim()
+       let split = text.split("|")
+       let char = text.charCodeAt(0)
+       console.log(split)
+       console.log(char)
+       console.log(text);//I love dogs. Dogs are very easy to love.
+       if(new Date().getHours() < 18) {
+        document.getElementById("demo").innerHTML="Good Day!";
+       } else() {
+
+       }
+       const hour = new Date().getHours();
+       let greeting;
+       if(hour < 18) {
+        greeting = "Good day.";
+       } else {
+        greeting = "Good evening.";
+       }
+       document.getElementById("demo").innerHTML = greeting;
+       const time = new Date().getHours();
+       let greeting;
+       if (time < 10) {
+        greeting = "Good Morning";
+       } else if (time < 20) {
+        greeting = "Good day";
+       } else {
+        greeting = "Good Evening" ;
+       }
+       document.getElementById("demo").innerHTML = greeting;
+       let hour = 12;
+       let isWeekend = true;
+       if (hour < 10 || hour > 18 || isWeekend) {
+        alert("The office is closed"); //It is weekend
+       }
+       const select = document.querySelector("select");
+       const para = document.querySelector("p");
+       select.addEventListener("change", setWeather);
+       function setWeather() {
+        const choice = select.value;
+        switch (choice) {
+            case "sunny":
+                para.textContent =
+                    "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+                break;
+            case "rainy":
+                para.textContent =
+                    "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+                break;
+            case "snowing":
+                para.textContent =
+                    "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+                break;
+            case "overcast":
+                para.textContent =
+                    "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+                break;
+            default:
+                para.textContent = "";
+            }
+        }
+        const select = document.querySelector("select");
+        const html = document.querySelector("html");
+        document.body.style.padding = "10px";
+
+        function update(bgColor, textColor) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+
+        select.addEventListener("change", () =>
+            select.value === "black"
+                ? update("black", "white")
+                : update("white", "black"),
+        );
+        const select = document.querySelector('select');
+        const list = document.querySelector('ul');
+        const h1 = document.querySelector('h1');
+
+        select.addEventListener('change', () => {
+            const choice = select.value;
+
+            let days = 31;
+            if (choice === 'February') {
+                days = 28;
+            } else if (choice === 'April' || choice === 'June' || choice === 'September' || choice === 'November') {
+                days = 30;
+            }
+
+            createCalendar(days, choice);
+        });
+
+        function createCalendar(days, choice) {
+            list.innerHTML = '';
+            h1.textContent = choice;
+            for (let i = 1; i <= days; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = i;
+                list.appendChild(listItem);
+            }
+        }
+
+        createCalendar(31, 'January');
+        const select = document.querySelector('select');
+        const html = document.querySelector('.output');
+
+        select.addEventListener('change', () => {
+            const choice = select.value;
+
+            switch (choice) {
+                case 'black':
+                    update('black', 'white');
+                    break;
+                case 'white':
+                    update('white', 'black');
+                    break;
+                case 'purple':
+                    update('purple', 'white');
+                    break;
+                case 'yellow':
+                    update('yellow', 'purple');
+                    break;
+                case 'psychedelic':
+                    update('lime', 'purple');
+                    break;
+            }
+        });
+
+        function update(bgColor, textColor) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+        let a = 2 + 2;
+        switch(a){
+            case 3:
+                console.log("Too small"); 
+                break;
+            case 4:
+                console.log("Just right!");
+                break;
+            case 5: 
+            console.log("Too big")
+            break;
+            default : //default is optional and can be used when all other cases are not true or if
+            console.log("Invalid input!")
+        }
+        console.log('Loading!');
+        const h1 = document.querySelector('h1');
+        console.log(h1.textContent);
+        console.assert(document.querySelector('h2'), 'h2 not found!');
+        const artists = [
+            {
+                first: 'René',
+                last: 'Magritte'
+            },
+            {
+                first: 'Chaim',
+                last: 'Soutine'
+            },
+            {
+                first: 'Henri',
+                last: 'Matisse'
+            }
+        ];
+        console.table(artists);
+        setTimeout(() => {
+            h1.textContent = 'Hello, Console!';
+            console.log(h1.textContent);
+        }, 3000);
+        function draw() {
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            for (let i = 0; i < 100; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgba(255,0,0,0.5)";
+                ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+        draw();
+        function myFunction() {
+            alert("hello");
+        }
+
+        myFunction();
+        // calls the function once
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+        textBox.addEventListener("keydown", (event) => {
+            output.textContent = `You pressed "${event.key}".`;
+        });
+        function favoriteAnimal(animal) {
+            return animal + " is my favorite animal!"
+        }
+        console.log(favoriteAnimal('Goat'))
+        function add7(n) {
+            return n + 7;
+        }
+        console.log(add7(13));
+        function multiply(a,b) {
+            return a * b;
+        }
+        console.log(multiply(25,4));
+        let str = "this is a string";
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        }
+        console.log(capitalize("this is funny as fuck"))
+        function lastLetter(str) {
+            return str.charAt(str.length-1);
+        }
+        console.log(lastLetter(str))*/      
+        let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+        for (let i = 1; i <= answer; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+
+        
+
+
+
+    </script>
+</body>
+</html>
