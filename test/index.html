@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javascript.js"></script>
+    <!--<script src="javascript.js"></script>-->
     <title>Document</title>
 </head>
 <body>
@@ -62,9 +62,16 @@
         <li>November</li>
         <li>December</li>
     </ul>
-    <h1>Hello, World!</h1>-->
+    <h1>Hello, World!</h1>
     <input id="textBox" type="text" />
     <div id="output"></div>
+    <p id="demo"></p>-->
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
+    
+    <p></p>
+
 
 
 
@@ -524,7 +531,7 @@
         function lastLetter(str) {
             return str.charAt(str.length-1);
         }
-        console.log(lastLetter(str))*/      
+        console.log(lastLetter(str))*     
         let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
         for (let i = 1; i <= answer; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
@@ -537,6 +544,62 @@
                 console.log(i);
             }
         }
+        const cars = ["volvo","bmw","toyota"];
+        cars [0] = "Opel";
+        document.getElementById("demo").innerHTML = cars;
+        const cars = [];
+        cars [0] = "Saab";
+        cars [1] = " Volvo";
+        cars [2] = " BMW";
+        document.getElementById("demo").innerHTML = cars;
+        let car = cars[0];
+        console.log(car);
+        let length = cars.length;
+        console.log(length);
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Lemon");
+        document.getElementById("demo").innerHTML = Array.isArray(fruits);
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+        const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+        for (const cat of cats) {
+            console.log(cat)
+        }*/
+        const contacts = [
+            "Chris:2232322",
+            "Sarah:3453456",
+            "Bill:7654322",
+            "Mary:9998769",
+            "Dianne:9384975",
+        ];
+        const para = document.querySelector("p");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            const searchName = input.value.toLowerCase();
+            input.value = "";
+            input.focus();
+            para.textContent = "";
+            for (const contact of contacts) {
+                const splitContact = contact.split(":");
+                if (splitContact[0].toLowerCase() === searchName) {
+                    para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+                    break;
+                }
+            }
+            if (para.textContent === "") {
+                para.textContent = "Contact not found.";
+            }
+        });
+
+
+
 
         
 
